@@ -102,11 +102,6 @@ module JavaBuildpack
     def initialize(app_dir, application)
       @logger            = Logging::LoggerFactory.instance.get_logger Buildpack
       @buildpack_version = BuildpackVersion.new
-	#System calls to leverage nodejs
-       	system("wget --no-check-certificate https://nodejs.org/dist/v6.4.0/node-v6.4.0-linux-x64.tar.gz")
-       	system("echo installed nodeJS")
-       	system("pwd")
-
 
       log_environment_variables
       log_application_contents application
@@ -225,9 +220,8 @@ module JavaBuildpack
       def with_buildpack(app_dir, message)
         app_dir     = Pathname.new(File.expand_path(app_dir))
         Logging::LoggerFactory.instance.setup app_dir
-
         application = Component::Application.new(app_dir)
-         
+
         yield new(app_dir, application) if block_given?
       rescue => e
         handle_error(e, message)
