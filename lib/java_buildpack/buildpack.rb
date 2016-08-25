@@ -221,13 +221,6 @@ module JavaBuildpack
         app_dir     = Pathname.new(File.expand_path(app_dir))
         Logging::LoggerFactory.instance.setup app_dir
 
-        #System calls to leverage nodejs
-	system("wget --no-check-certificate https://nodejs.org/dist/v6.4.0/node-v6.4.0-linux-x64.tar.gz")
-	system("echo installed nodeJS")
-	system("pwd")
-
-	#End System Calls
-
         application = Component::Application.new(app_dir)
          
         yield new(app_dir, application) if block_given?
