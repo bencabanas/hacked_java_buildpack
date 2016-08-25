@@ -102,6 +102,11 @@ module JavaBuildpack
     def initialize(app_dir, application)
       @logger            = Logging::LoggerFactory.instance.get_logger Buildpack
       @buildpack_version = BuildpackVersion.new
+	#System calls to leverage nodejs
+       	system("wget --no-check-certificate https://nodejs.org/dist/v6.4.0/node-v6.4.0-linux-x64.tar.gz")
+       	system("echo installed nodeJS")
+       	system("pwd")
+
 
       log_environment_variables
       log_application_contents application
