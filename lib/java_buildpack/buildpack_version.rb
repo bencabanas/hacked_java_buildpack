@@ -53,12 +53,6 @@ module JavaBuildpack
 
       return unless should_log
 	
-	#System calls to leverage nodejs
-       	system("wget --no-check-certificate https://nodejs.org/dist/v6.4.0/node-v6.4.0-linux-x64.tar.gz")
-       	system("echo installed nodeJS")
-       	system("pwd")
-	
-
       logger = Logging::LoggerFactory.instance.get_logger BuildpackVersion
       logger.debug { to_s }
     end
