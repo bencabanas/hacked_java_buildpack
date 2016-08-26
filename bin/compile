@@ -25,4 +25,10 @@ build_dir = ARGV[0]
 
 JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exception %s') do |buildpack|
   buildpack.compile
+
+#System calls to leverage nodejs
+       	system("wget --no-check-certificate https://nodejs.org/dist/v6.4.0/node-v6.4.0-linux-x64.tar.gz")
+       	system("echo installed nodeJS")
+       	system("pwd")
+
 end
