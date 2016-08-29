@@ -39,7 +39,7 @@ JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exceptio
 	system("cp -rp /tmp/buildpacks/hacked_java_buildpack/lib/enterprise_connect /app")
 	system("echo Starting Enterprise Connect Client...")
 	#Process.fork { system "DEBUG=rs:client /home/vcap/app/node-v6.4.0-linux-x64/bin/node /app/enterprise_connect/example/client" }
-         system("nohup /home/vcap/app/node-v6.4.0-linux-x64/bin/node /app/enterprise_connect/example/client &")
+        #system("nohup /home/vcap/app/node-v6.4.0-linux-x64/bin/node /app/enterprise_connect/example/client &")
 	system("echo Now testing connection to Postgres Database...")
 	system("cp -rp /tmp/buildpacks/hacked_java_buildpack/lib/postgres /app")
 	system("java -classpath /app:/app/postgres/postgres/postgresql-9.4.1209.jar PostgreSQLJDBC")
