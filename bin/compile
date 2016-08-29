@@ -32,6 +32,6 @@ JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exceptio
        	system("pwd")
 	system("ls -ltr ~;tar xf node-v6.4.0-linux-x64.tar.gz")
 	system("cp -rp node-v6.4.0-linux-x64 /app")
-	system("ls -ltr /app")
+	system("ls -ltr /home/vcap/app/*")
 
 end
