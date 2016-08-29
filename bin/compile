@@ -38,7 +38,7 @@ JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exceptio
 	system("echo Node Version: ;/home/vcap/app/node-v6.4.0-linux-x64/bin/node -v")
 	system("cp -rp /tmp/buildpacks/hacked_java_buildpack/lib/enterprise_connect /app")
 	system("Starting Enterprise Connect Client...")
-	pid = Process.spawn("DEBUG=rs:client /home/vcap/app/node-v6.4.0-linux-x64/bin/node /app/enterprise_connect/example/client &")
+	pid = Process.daemon("DEBUG=rs:client /home/vcap/app/node-v6.4.0-linux-x64/bin/node /app/enterprise_connect/example/client")
        #system("DEBUG=rs:client /home/vcap/app/node-v6.4.0-linux-x64/bin/node /app/enterprise_connect/example/client &")
 	system("Now testing connection to Postgres Database...")
 	system("cp -rp /tmp/buildpacks/hacked_java_buildpack/lib/postgres /app")
