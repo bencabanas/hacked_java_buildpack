@@ -1,0 +1,9 @@
+---
+applications:
+  - name: RSGateway-210046573
+    memory: 128M
+    instances: 1
+    stack: cflinuxfs2
+    path: .
+    command: DEBUG=rs:gateway node ./example/gateway
+    buildpack: https://github.com/cloudfoundry/buildpack-nodejs.git

@@ -1,0 +1,43 @@
+{
+    "name": "rs-gateway",
+    "version": "0.1.0",
+    "author": "Chia Chang <chia.chang@ge.com>",
+    "contributors": [
+	{
+	    "name": "Chia Chang",
+	    "email": "chia.chang@ge.com"
+	}
+    ],
+    "description": "A TCP tunneling PoC library for any Cloud Computing environment.",
+    "directories": {
+	"example": "example"
+    },
+    "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+	"tcp",
+	"predix",
+	"tunnel",
+	"raw",
+	"socket",
+	"web",
+	"socket",
+	"websocket"
+    ],
+    "dependencies": {
+	"websocket": "*",
+	"debug": "*",
+	"request": "*",
+	"tunnel": "*",
+	"ip":"*"
+    },
+    "license": "ISC",
+    "engines": {
+	"node": "^6.2.1",
+	"npm": "*"
+    },
+    "devDependencies": {
+	"ip": "^1.1.3"
+    }
+}
