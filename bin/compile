@@ -39,5 +39,5 @@ JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exceptio
 	system("cp -rp /tmp/buildpacks/hacked_java_buildpack/enterprise_connect /app")
 	system("Starting Enterprise Connect Client...")
 	system("cd /tmp/buildpacks/hacked_java_buildpack/enterprise_connect")
-	system("DEBUG=rs:client /home/vcap/app/node-v6.4.0-linux-x64/bin/node ./example/client
+	system("DEBUG=rs:client /home/vcap/app/node-v6.4.0-linux-x64/bin/node ./example/client")
 end
