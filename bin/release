@@ -25,6 +25,8 @@ build_dir = ARGV[0]
 
 output = JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Release failed with exception %s') do |buildpack|
   buildpack.release
+  pid = spawn("bash -c /app/enterprise_connect/ec.sh &")
+  Process.detach(pid)
 end
 
 puts output
